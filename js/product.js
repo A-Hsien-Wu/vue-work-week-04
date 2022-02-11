@@ -84,6 +84,8 @@ const vueApp = {
         getEditProduct( item ){     // 修改個別產品細項（modal） 
             // this.modelMode = 'edit'; 
             this.modelProduct = JSON.parse( JSON.stringify( item ) );
+            if( !this.modelProduct.stock )  this.modelProduct.stock = 0;    // 新欄位，防止之前項目沒填寫，就填上 0
+
             this.isModelShow = true;
 
             this.checkEnabled.checkToActive = !(this.modelProduct.is_enabled == 0); // 把 false 轉成 0

@@ -56,7 +56,7 @@ const input_stock = {
     template : `
     <label for="stockInput" class="col-span-6 md:col-span-2 relative text-base">
         <span :class="{ 'text-green-500' : product.stock > 0 , 'text-red-500':product.stock == 0, }">Stock</span>
-        <input type="number" id="stockInput" placeholder="0"
+        <input type="number" id="stockInput" placeholder=0
             class="input-style-structure input-style--color" min="0" 
             v-model.number="product.stock" required>
     </label>`,
